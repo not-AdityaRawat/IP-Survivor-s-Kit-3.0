@@ -1,18 +1,24 @@
 // src/components/Navbar.jsx
 import React, { useState } from 'react';
+import dropdownPNG from '../icons/dropdown icon.png'
+import HamburgerPNG from '../icons/Hamburger Icon.png'
+import dropdownWHitePNG from '../icons/dropdownWHite.png'
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   return (
     <nav className="bg-teal-700 text-white px-4 py-3 flex justify-between items-center">
-      <h1 className="text-xl font-bold">IP Survivor's Kit</h1>
+      <h1 className="sm:text-sm md:text-3xl font-bold">IP Survivor's Kit</h1>
       {/* Desktop Menu */}
-      <div className="hidden md:flex space-x-6">
-        <button className="hover:underline">Datesheet</button>
-        <button className="hover:underline">Previous Versions</button>
-        <button className="hover:underline">About</button>
-        <button className="bg-yellow-400 text-black px-4 py-2 rounded">Contribute</button>
+      <div className="hidden md:flex space-x-6 items-center">
+        <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 ">
+         Datesheet  <img src={dropdownPNG} alt="DropDown icon" className="h-2 ml-1 inline-block "/> </button>
+        <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 ">Previous Versions</button>
+        <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 ">About</button>
+      </div>
+      <div className="hidden md:flex space-x-6 items-center">
+      <button className="font-bold bg-yellow-400 text-black px-4 py-2 rounded">Contribute</button>
       </div>
 
       {/* Hamburger Menu for Mobile */}
@@ -21,12 +27,12 @@ const Navbar = () => {
           onClick={() => setMenuOpen(!menuOpen)}
           className="text-white focus:outline-none"
         >
-          <span className="material-icons">menu</span>
+          <span className="material-icons"><img src={HamburgerPNG} alt="HamburgerPNG" className='w-5 h-5 mt-2' /></span>
         </button>
         {menuOpen && (
-          <div className="absolute right-0 top-12 bg-gray-100 text-green-700 shadow-md w-48 rounded-md">
+          <div className="absolute right-0 top-12 bg-gray-100 text-black shadow-md w-48 rounded-md">
             <button className="block w-full text-left px-4 py-2 hover:bg-gray-200">
-              Datesheet
+              Datesheet<img src={dropdownWHitePNG} alt="DropDown icon" className="h-3 ml-1 inline-block "/>
             </button>
             <button className="block w-full text-left px-4 py-2 hover:bg-gray-200">
               Previous Versions
@@ -34,9 +40,7 @@ const Navbar = () => {
             <button className="block w-full text-left px-4 py-2 hover:bg-gray-200">
               About
             </button>
-            <button className="block w-full text-left px-4 py-2 bg-yellow-400 text-black rounded">
-              Contribute
-            </button>
+            <button className="font-bold w-full bg-yellow-400 text-black px-4 py-2 rounded">Contribute</button>
           </div>
         )}
       </div>
