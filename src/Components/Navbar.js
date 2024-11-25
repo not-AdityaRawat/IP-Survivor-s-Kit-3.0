@@ -9,7 +9,7 @@ const Navbar = () => {
 
   return (
     <nav className="bg-teal-700 text-white px-4 py-3 flex justify-between items-center">
-      <h1 className="sm:text-sm md:text-3xl font-bold">IP Survivor's Kit</h1>
+      <h1 className="sm:text-3xl text-2xl font-bold">IP Survivor's Kit</h1>
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6 items-center">
         <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 ">
@@ -18,7 +18,7 @@ const Navbar = () => {
         <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 ">About</button>
       </div>
       <div className="hidden md:flex space-x-6 items-center">
-      <button className="font-bold bg-yellow-400 text-black px-4 py-2 rounded">Contribute</button>
+      <button className="font-bold bg-yellow-400 text-black px-4 py-2 rounded" onClick={()=> window.open("https://github.com/not-AdityaRawat/IP-Survivor-s-Kit-3.0","_blank")} > Contribute</button>
       </div>
 
       {/* Hamburger Menu for Mobile */}
