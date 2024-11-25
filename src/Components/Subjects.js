@@ -14,8 +14,8 @@ const Subjects = () => {
 
   return (
     <div className="bg-green-100 p-6 rounded-lg mx-auto">
-      <h2 className="text-lg font-semibold mb-4 ">Choose Subject</h2>
-      <div className="space-y-2">
+      <h2 className="text-lg font-semibold mb-4">Choose Subject</h2>
+      <div className=" space-y-2">
         {subjects.map((subject, index) => (
           <button
             key={index}
