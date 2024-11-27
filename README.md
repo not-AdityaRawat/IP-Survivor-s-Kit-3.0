@@ -66,10 +66,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/a
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
 
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-=======
 # IP-Survivor-s-Kit-3.0
+![IPUI3](https://github.com/user-attachments/assets/8a24928c-07d2-43e5-a183-c472c77b36f8)
+
 Revamp of IP-Survivor's-Kit-1.0
 >>>>>>> d4df6a045748308ee86562a445b899bd4f166cf4
