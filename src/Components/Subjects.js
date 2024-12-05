@@ -19,7 +19,7 @@ const Subjects = () => {
         {subjects.map((subject, index) => (
           <button
             key={index}
-            className="bg-white w-full py-2 rounded hover:bg-green-400 "
+            className="bg-white w-full py-2 rounded hover:bg-green-400 hover:font-semibold "
           >
             {subject}
           </button>
