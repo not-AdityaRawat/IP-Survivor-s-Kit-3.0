@@ -1,29 +1,53 @@
-// src/components/Subjects.jsx
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-const Subjects = () => {
-  const subjects = [
-    'Computational methods (2 Credits)',
-    'Data Structures',
-    'Foundation of Computer Science',
-    'Object-Oriented Programming',
-    'Operation System',
-    'DLCD',
-    'Engineering Economics',
-  ];
+const Subjects = (props) => {
+  const [subjects, setSubjects] = useState([]);
+
+  // Fetch data from subjects.json
+  const fetchData = async () => {
+    try {
+      let response = await fetch('./public/subjects.json');
+      if (!response.ok) {
+        throw new Error(`HTTP Error! Status: ${response.status}`);
+      }
+      let data = await response.json();
+      setSubjects(data);
+      console.log(data);
+    } catch (error) {
+      console.error("Error Fetching data:", error);
+    }
+  };
+
+  // Fetch subjects data on component mount
+  useEffect(() => {
+    fetchData();
+  }, []); // Empty dependency array to ensure it runs once on mount
+
+  // Filter subjects based on Semester and Branch
+  const filteredSubjects = subjects.filter(subject => {
+    // Filter by semester and branch
+    return (
+      subject.sem === parseInt(props.Semester) && subject.branch === props.Branch
+    );
+  });
 
   return (
     <div className="bg-green-100 p-6 rounded-lg mx-auto">
       <h2 className="text-lg font-semibold mb-4">Choose Subject</h2>
-      <div className=" space-y-2">
-        {subjects.map((subject, index) => (
-          <button
-            key={index}
-            className="bg-white w-full py-2 rounded hover:bg-green-400 hover:font-semibold "
-          >
-            {subject}
-          </button>
-        ))}
+      <div className="space-y-2">
+        {/* Display the filtered subjects */}
+        {filteredSubjects.length > 0 ? (
+          filteredSubjects.map((name, id, credits) => (
+            <button
+              key={id}
+              className="bg-white w-full py-2 rounded hover:bg-green-400 hover:font-semibold"
+            >
+              {subject.name} - Credits: {subject.credits}
+            </button>
+          ))
+        ) : (
+          <p>No subjects available for the selected semester and branch.</p>
+        )}
       </div>
     </div>
   );
