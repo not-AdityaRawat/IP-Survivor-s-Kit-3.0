@@ -40,13 +40,14 @@ const Subjects = (props) => {
   return (
     <div className="bg-green-100 p-6 rounded-lg mx-auto">
       <h2 className="text-lg font-semibold mb-4">Choose Subject</h2>
-      <div className="space-y-2">
+      <div className="space-y-2 ">
         {/* Display the filtered subjects */}
         {filteredSubjects.length > 0 ? (
           filteredSubjects.map((subject,index) => (
             <button
               key={index}
-              className="bg-white w-full py-2 rounded hover:bg-green-400 hover:font-semibold"
+              className="bg-white w-full py-2 rounded hover:bg-green-400 hover:font-semibold p-2"
+              // onClick={handleClick}
             >
              ({subject.code}) {subject.name}<span className='text-xs font-mono text-green-800'>  Credits: {subject.credits}</span>  
             </button>

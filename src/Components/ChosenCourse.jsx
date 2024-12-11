@@ -49,7 +49,7 @@ const ChosenCourse = (props) => {
   };
 
   return (
-    <div className="bg-teal-700 p-8 w-4/5 mx-auto rounded-lg mt-4 border-2 border-black">
+    <div className="bg-teal-700 p-8 w-4/5 mx-auto rounded-lg mt-4 border-2 border-black ">
       <h2 className="text-lg font-semibold mb-4 text-white">{props.chosencourse}</h2>
       <div className="space-y-6">
         <select
