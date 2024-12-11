@@ -48,7 +48,7 @@ const Subjects = (props) => {
               key={index}
               className="bg-white w-full py-2 rounded hover:bg-green-400 hover:font-semibold"
             >
-             ({subject.code}) {subject.name} - Credits: {subject.credits}
+             ({subject.code}) {subject.name}<span className='text-xs font-mono text-green-800'>  Credits: {subject.credits}</span>  
             </button>
           ))
         ) : (
