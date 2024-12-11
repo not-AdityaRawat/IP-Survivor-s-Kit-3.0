@@ -6,7 +6,7 @@ const Subjects = (props) => {
   // Fetch data from subjects.json
   const fetchData = async () => {
     try {
-      let response = await fetch('./public/subjects.json');
+      let response = await fetch('/subjects.json');
       if (!response.ok) {
         throw new Error(`HTTP Error! Status: ${response.status}`);
       }
@@ -26,8 +26,14 @@ const Subjects = (props) => {
   // Filter subjects based on Semester and Branch
   const filteredSubjects = subjects.filter(subject => {
     // Filter by semester and branch
+    const isCourseMatch = subject.course==props.chosencourse;
+    const isSemesterMatch = subject.sem === parseInt(props.Semester);
+    const isBranchMatch = Array.isArray(subject.branch)
+                          ? subject.branch.includes(props.Branch) // If `branch` is an array
+                          : subject.branch === props.Branch; // If `branch` is a string
+
     return (
-      subject.sem === parseInt(props.Semester) && subject.branch === props.Branch
+      isCourseMatch && isSemesterMatch && isBranchMatch
     );
   });
 
@@ -37,12 +43,12 @@ const Subjects = (props) => {
       <div className="space-y-2">
         {/* Display the filtered subjects */}
         {filteredSubjects.length > 0 ? (
-          filteredSubjects.map((name, id, credits) => (
+          filteredSubjects.map((subject,index) => (
             <button
-              key={id}
+              key={index}
               className="bg-white w-full py-2 rounded hover:bg-green-400 hover:font-semibold"
             >
-              {subject.name} - Credits: {subject.credits}
+             ({subject.code}) {subject.name} - Credits: {subject.credits}
             </button>
           ))
         ) : (

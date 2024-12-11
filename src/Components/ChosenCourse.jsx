@@ -14,14 +14,15 @@ const ChosenCourse = (props) => {
   ];
   const McaSems = [
     "Select Semester",
-    "Semester 1",
-    "Semester 2",
-    "Semester 3",
-    "Semester 4",
+    "1",
+    "2",
+    "3",
+    "4",
   ];
   const Subjects = [
+    "Select Branch",
     "Computer Science",
-    "IT",
+    "Information Technology",
     "Electronics",
     "CSAI",
     "CSDS",

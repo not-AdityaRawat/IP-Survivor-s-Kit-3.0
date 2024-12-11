@@ -9,6 +9,7 @@ const App = () => {
   const [isMCA, setIsMCA] = useState(false);
   const [semester, setSemester] = useState(null);
   const [branch, setBranch] = useState(null);
+  const [subjectAppear, setsubjectAppear] = useState(false)
 
   const handleSelectedCourse = (e) => {
     if (e === "BTech") {
@@ -18,6 +19,7 @@ const App = () => {
       setIsBtech(false);
       setIsMCA(true);
     }
+    setsubjectAppear(true)
   };
 
   const handleSemesterAndBranchChange = (Semester, Branch) => {
@@ -41,11 +43,11 @@ const App = () => {
             {isMCA && <ChosenCourse chosencourse="MCA" onSemesterAndBranchChange={handleSemesterAndBranchChange} />}
           </div>
           <div>
-            <Subjects
+           {subjectAppear && <Subjects
               chosencourse={isBtech ? "BTech" : "MCA"}
               Semester={semester}
               Branch={branch}
-            />
+            />}
           </div>
         </div>
       </div>
