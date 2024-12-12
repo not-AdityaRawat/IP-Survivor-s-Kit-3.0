@@ -70,7 +70,7 @@ const ChosenCourse = (props) => {
           {props.chosencourse === "BTech" ? (
             Subjects.map((sems, index) => <option key={index}>{sems}</option>)
           ) : (
-            <option>Software Technology</option>
+            <option>Software Engineering</option>
           )}
         </select>
       </div>

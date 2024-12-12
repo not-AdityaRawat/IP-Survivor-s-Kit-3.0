@@ -7,22 +7,44 @@ import { useNavigate } from "react-router-dom";
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const navigate= useNavigate();
+  const navigate = useNavigate();
 
   return (
     <nav className="bg-teal-700 text-white px-4 py-3 flex justify-between items-center">
-      <h1 className="sm:text-3xl text-2xl font-bold hover:cursor-pointer" onClick={()=>{navigate('/')}}>IP Survivor's Kit </h1>
+      <h1
+        className="sm:text-3xl text-2xl font-bold hover:cursor-pointer"
+        onClick={() => {
+          navigate("/");
+        }}
+      >
+        IP Survivor's Kit{" "}
+      </h1>
       {/* Desktop Menu */}
       <div className="hidden md:flex space-x-6 items-center">
-        <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 ">
+        <button
+          className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 "
+          onClick={() => {
+            alert("Under Construction 👷‍♂️");
+          }}
+        >
           Workplace <span className="">&#x24D1;</span>{" "}
         </button>
 
-        <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 ">
+        <button
+          className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 "
+          onClick={() =>
+            window.open("https://ip-survivors-kit.vercel.app/", "_blank")
+          }
+        >
           Previous Versions
         </button>
 
-        <button className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 " onClick={()=>{navigate('/about')}}>
+        <button
+          className="font-bold hover:bg-neutral-700 hover:rounded px-2 py-2 "
+          onClick={() => {
+            navigate("/about");
+          }}
+        >
           About
         </button>
       </div>
@@ -62,7 +84,12 @@ const Navbar = () => {
         </button>
         {menuOpen && (
           <div className="absolute right-0 top-12 bg-gray-100 text-black shadow-md w-48 rounded-md">
-            <button className="block w-full text-left px-4 py-2 hover:bg-gray-200">
+            <button
+              className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+              onClick={() => {
+                alert("Under Construction 👷‍♂️");
+              }}
+            >
               WorkPlace <span className="">&#x24D1;</span>
             </button>
             <button
@@ -73,7 +100,12 @@ const Navbar = () => {
             >
               Previous Versions
             </button>
-            <button className="block w-full text-left px-4 py-2 hover:bg-gray-200"  onClick={()=>{navigate('/about')}}>
+            <button
+              className="block w-full text-left px-4 py-2 hover:bg-gray-200"
+              onClick={() => {
+                navigate("/about");
+              }}
+            >
               About
             </button>
             <button
