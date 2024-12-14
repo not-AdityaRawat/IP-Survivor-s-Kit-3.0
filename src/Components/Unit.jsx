@@ -1,16 +1,19 @@
 import React, { useState, useEffect } from "react";
+
 import {
   FiExternalLink,
   FiThumbsUp,
   FiThumbsDown,
   FiArrowLeftCircle,
 } from "react-icons/fi";
+import { useNavigate } from "react-router";
 
 const Unit = (props) => {
   const [unit, setUnit] = useState([]);
   const [loading, setLoading] = useState(true); // To track loading state
   const [error, setError] = useState(null); // To handle fetch errors
   const [Lecture, setLecture] = useState([]);
+  const navigate = useNavigate();
 
   const fetchData = async () => {
     try {
@@ -73,14 +76,14 @@ const Unit = (props) => {
         <h1 className="text-2xl text-white font-semibold mb-6 text-center">
           <FiArrowLeftCircle
             className="cursor-pointer inline-block"
-            onClick={() => props.goToChosenSubject(true)}
+            onClick={() => navigate(-1)}
           />{" "}
           {props.subjectname}
         </h1>
 
         {/* Unit Selector */}
         <div className="mb-4">
-          <button className="bg-green-200 text-green-800 px-4 py-2 rounded-xl font-semibold flex items-center gap-2 shadow-md" onClick={() => props.goToChosenSubject(true)}>
+          <button className="bg-green-200 text-green-800 px-4 py-2 rounded-xl font-semibold flex items-center gap-2 shadow-md" onClick={() => navigate(-1)}>
             {props.unitname} <span className="text-lg rotate-90">&gt;</span>
           </button>
         </div>

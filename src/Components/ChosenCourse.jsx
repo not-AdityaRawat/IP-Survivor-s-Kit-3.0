@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate, useParams } from "react-router";
 
 const ChosenCourse = (props) => {
   const BtechSems = [
@@ -12,13 +13,7 @@ const ChosenCourse = (props) => {
     "7",
     "8",
   ];
-  const McaSems = [
-    "Select Semester",
-    "1",
-    "2",
-    "3",
-    "4",
-  ];
+  const McaSems = ["Select Semester", "1", "2", "3", "4"];
   const Subjects = [
     "Computer Science",
     "Information Technology",
@@ -27,51 +22,66 @@ const ChosenCourse = (props) => {
     "CSDS",
   ];
 
-  const [semester, setSemester] = useState(null);
-  const [branch, setBranch] = useState(null);
+  const navigate = useNavigate();
+  const { sem, Branch } = useParams(); // Single destructure for parameters
+
+  // Initialize states with URL parameters or defaults
+  const [semester, setSemester] = useState(sem || "Select Semester");
+  const [branch, setBranch] = useState(Branch || "Select Branch");
 
   useEffect(() => {
-    // Logging the updated values using useEffect to ensure they're updated properly
     console.log(`Updated Semester: ${semester}, Updated Branch: ${branch}`);
-  }, [semester, branch]); // Runs when either 'semester' or 'branch' state changes
+  }, [semester, branch]);
 
   const handleSemesterChange = (e) => {
     const selectedSemester = e.target.value;
+    if (selectedSemester !== "Select Semester") {
     setSemester(selectedSemester);
-    props.onSemesterAndBranchChange(selectedSemester, branch);
+    navigate(`/Course/${props.chosencourse}/${selectedSemester}/${branch}`);
+    }
   };
 
   const handleBranchChange = (e) => {
     const selectedBranch = e.target.value;
+    if (selectedBranch !== "Select Branch") {
     setBranch(selectedBranch);
-    props.onSemesterAndBranchChange(semester, selectedBranch);
+    navigate(`/Course/${props.chosencourse}/${semester}/${selectedBranch}/Subjects`);
+    }
   };
 
   return (
-    <div className="bg-teal-700 p-8 w-4/5 mx-auto rounded-lg mt-4 border-2 border-black ">
+    <div className="bg-teal-700 p-8 w-4/5 mx-auto rounded-lg mt-4 border-2 border-black">
       <h2 className="text-lg font-semibold mb-4 text-white">{props.chosencourse}</h2>
       <div className="space-y-6">
         <select
           className="w-full font-semibold py-2 px-4 bg-white rounded border"
+          value={semester}
           onChange={handleSemesterChange}
         >
-          {props.chosencourse === "BTech"
-            ? BtechSems.map((sems, index) => (
-                <option key={index}>{sems}</option>
-              ))
-            : McaSems.map((sems, index) => <option key={index}>{sems}</option>)}
+          {(props.chosencourse === "BTech" ? BtechSems : McaSems).map(
+            (sems, index) => (
+              <option key={index} value={sems}>
+                {sems}
+              </option>
+            )
+          )}
         </select>
 
         <select
           className="w-full font-semibold py-2 px-4 bg-white rounded border"
+          value={branch}
           onChange={handleBranchChange}
         >
-          <option>Select Branch</option>
-          {props.chosencourse === "BTech" ? (
-            Subjects.map((sems, index) => <option key={index}>{sems}</option>)
-          ) : (
-            <option>Software Engineering</option>
-          )}
+          <option value="Select Branch">Select Branch</option>
+          {props.chosencourse === "BTech"
+            ? Subjects.map((branchName, index) => (
+                <option key={index} value={branchName}>
+                  {branchName}
+                </option>
+              ))
+            : (
+                <option value="Software Engineering">Software Engineering</option>
+              )}
         </select>
       </div>
     </div>

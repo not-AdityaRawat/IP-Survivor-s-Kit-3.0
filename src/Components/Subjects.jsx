@@ -1,8 +1,10 @@
 import React, { useState, useEffect } from "react";
+import { useNavigate} from "react-router";
 
 const Subjects = (props) => {
   const [subjects, setSubjects] = useState([]);
   const [selectedSubject, setSelectedSubject] = useState(null);
+  const navigate = useNavigate();
 
   // Fetch data from subjects.json
   const fetchData = async () => {
@@ -38,7 +40,8 @@ const Subjects = (props) => {
   const handleClick = (subject) => {
     setSelectedSubject(subject.name);
     console.log("Selected Subject:", subject.name);
-    props.onsubjectSelect(subject.name)
+    // props.onsubjectSelect(subject.name)
+    navigate(`/Course/${props.chosencourse}/${props.Semester}/${props.Branch}/Subjects/${subject.name}`)
   };
 
 

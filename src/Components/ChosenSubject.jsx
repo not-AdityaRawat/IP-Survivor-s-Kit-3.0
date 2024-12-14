@@ -1,6 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import dropdownBlack from '../icons/dropdownWHite.png'
 import {FiArrowLeftCircle} from "react-icons/fi";
+import { useNavigate, useParams } from 'react-router';
 
 const ChosenSubject = (props) => {
   const subjects = [
@@ -9,15 +10,16 @@ const ChosenSubject = (props) => {
     'UNIT-3',
     'UNIT-4'
   ];
-
+  const navigate = useNavigate();
   const handleClick=()=>{
-    props.goback(true);
+    navigate(-1)
   }
-
+  const { course, sem, Branch, subject} = useParams();
 
   // const [unitname, setunitname] = useState(null)
   const handleUnit=(unit)=>{
-    props.selectedunit(unit);
+    // props.selectedunit(unit);
+    navigate(`/Course/${course}/${sem}/${Branch}/Subjects/${subject}/${unit}`)
     console.log("Unit selected ",unit)
   }
 

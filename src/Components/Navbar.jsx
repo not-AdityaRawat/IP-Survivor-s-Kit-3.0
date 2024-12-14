@@ -1,12 +1,15 @@
-// src/components/Navbar.jsx
 import React, { useState } from "react";
 import HamburgerPNG from "../icons/Hamburger Icon.png";
 import dropdownBlackPNG from "../icons/dropdownWHite.png";
-import { useNavigate } from "react-router-dom";
+import { useNavigate} from "react-router-dom";
 
-const Navbar = ({isPopupOpen}) => {
+const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const navigate = useNavigate();
+
+  const handleclick = () => {
+    navigate(`/Contribute`); // Append '/Contribute'
+  };
 
   return (
     <nav className="bg-teal-700 text-white px-4 py-3 flex justify-between items-center">
@@ -50,10 +53,8 @@ const Navbar = ({isPopupOpen}) => {
       <div className="hidden md:flex space-x-6 items-center">
         <button
           className="font-bold bg-yellow-400 text-black px-4 py-2 rounded"
-          onClick={() =>navigate('/Contribute')
-          }
+          onClick={handleclick}
         >
-          {" "}
           Contribute{" "}
           <img
             src={dropdownBlackPNG}
@@ -105,7 +106,7 @@ const Navbar = ({isPopupOpen}) => {
             </button>
             <button
               className="font-bold w-full bg-yellow-400 text-black px-4 py-2 rounded"
-              onClick={() =>navigate('/Contribute')}
+              onClick={handleclick}
             >
               Contribute{" "}
               <img

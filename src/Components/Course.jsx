@@ -1,6 +1,18 @@
 import React from "react";
+import { useNavigate} from "react-router";
 
-const Course = ({ seletedCourse }) => {
+const Course = () => {
+  const navigate = useNavigate();
+  const seletedCourse=(course)=>{
+          if(course ==='BTech'){
+              navigate(`/Course/${course}`)
+              console.log(course)
+          }
+          else if(course==='MCA'){
+              navigate(`/Course/${course}`)
+              console.log(course)
+          }
+      }
   return (
     <div className="bg-teal-700 p-6 rounded-lg text-center text-white w-fit mx-auto mt-10 shadow-lg border-2 border-black">
       {/* Title */}
