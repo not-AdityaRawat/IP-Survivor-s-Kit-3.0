@@ -4,9 +4,8 @@ import HamburgerPNG from "../icons/Hamburger Icon.png";
 import dropdownBlackPNG from "../icons/dropdownWHite.png";
 import { useNavigate } from "react-router-dom";
 
-const Navbar = () => {
+const Navbar = ({isPopupOpen}) => {
   const [menuOpen, setMenuOpen] = useState(false);
-
   const navigate = useNavigate();
 
   return (
@@ -51,11 +50,7 @@ const Navbar = () => {
       <div className="hidden md:flex space-x-6 items-center">
         <button
           className="font-bold bg-yellow-400 text-black px-4 py-2 rounded"
-          onClick={() =>
-            window.open(
-              "https://github.com/not-AdityaRawat/IP-Survivor-s-Kit-3.0",
-              "_blank"
-            )
+          onClick={() =>navigate('/Contribute')
           }
         >
           {" "}
@@ -110,12 +105,7 @@ const Navbar = () => {
             </button>
             <button
               className="font-bold w-full bg-yellow-400 text-black px-4 py-2 rounded"
-              onClick={() =>
-                window.open(
-                  "https://github.com/not-AdityaRawat/IP-Survivor-s-Kit-3.0",
-                  "_blank"
-                )
-              }
+              onClick={() =>navigate('/Contribute')}
             >
               Contribute{" "}
               <img

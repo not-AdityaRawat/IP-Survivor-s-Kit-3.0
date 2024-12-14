@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import dropdownBlack from '../icons/dropdownWHite.png'
 import {FiArrowLeftCircle} from "react-icons/fi";
-import { useNavigate } from 'react-router';
 
 const ChosenSubject = (props) => {
   const subjects = [
@@ -10,11 +9,9 @@ const ChosenSubject = (props) => {
     'UNIT-3',
     'UNIT-4'
   ];
-  const navigate = useNavigate();
 
   const handleClick=()=>{
     props.goback(true);
-    navigate('/')
   }
 
 
@@ -22,7 +19,6 @@ const ChosenSubject = (props) => {
   const handleUnit=(unit)=>{
     props.selectedunit(unit);
     console.log("Unit selected ",unit)
-    navigate(`/subject/${props.subject.name}/${unit}`)
   }
 
   return (

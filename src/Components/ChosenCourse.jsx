@@ -20,7 +20,6 @@ const ChosenCourse = (props) => {
     "4",
   ];
   const Subjects = [
-    "Select Branch",
     "Computer Science",
     "Information Technology",
     "Electronics",
@@ -67,6 +66,7 @@ const ChosenCourse = (props) => {
           className="w-full font-semibold py-2 px-4 bg-white rounded border"
           onChange={handleBranchChange}
         >
+          <option>Select Branch</option>
           {props.chosencourse === "BTech" ? (
             Subjects.map((sems, index) => <option key={index}>{sems}</option>)
           ) : (

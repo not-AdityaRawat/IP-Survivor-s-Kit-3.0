@@ -1,130 +1,162 @@
 [
     {
+        "id": 1,
         "title": "Lecture-1 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "Data Structures",
-        "unitname": "UNIT-1"
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 2,
         "title": "Lecture-2 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
-        "subjectname": "",
-        "unitname": ""
+        "subjectname": "Data Structures",
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 3,
         "title": "Lecture-3 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
-        "subjectname": "",
-        "unitname": ""
+        "subjectname": "Data Structures",
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 4,
         "title": "Lecture-4 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
-        "subjectname": "",
-        "unitname": ""
+        "subjectname": "Data Structures",
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 5,
         "title": "Lecture-5 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
-        "subjectname": "",
-        "unitname": ""
+        "subjectname": "Data Structures",
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 6,
         "title": "Lecture-6 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 7,
         "title": "Lecture-1 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
-        "embeded": "",
+        "embeded": "Data Structures",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 8,
         "title": "Lecture-2 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 9,
         "title": "Lecture-3 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 10,
         "title": "Lecture-4 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 11,
         "title": "Lecture-5 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 12,
         "title": "Lecture-6 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 13,
         "title": "Lecture-3 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 14,
         "title": "Lecture-4 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 15,
         "title": "Lecture-5 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     },
     {
+        "id": 16,
         "title": "Lecture-6 notes",
         "uploadedBy": "owner",
         "upvotes": 0,
         "embeded": "",
         "subjectname": "",
-        "unitname": ""
+        "unitname": "UNIT-1",
+        "isValid":true
     }
 ]

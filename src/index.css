@@ -5,9 +5,10 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+#root{
   background-color: #E1F396;
 }
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
@@ -17,5 +18,8 @@ code {
 @tailwind utilities;
 
 .bg-custom-light-green {
+  background-color: #E1F396;
+}
+.popup{
   background-color: #E1F396;
 }

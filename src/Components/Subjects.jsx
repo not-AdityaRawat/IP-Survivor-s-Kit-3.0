@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from "react";
-import { useNavigate } from "react-router";
 
 const Subjects = (props) => {
   const [subjects, setSubjects] = useState([]);
@@ -35,14 +34,11 @@ const Subjects = (props) => {
     return isCourseMatch && isSemesterMatch && isBranchMatch;
   });
   
-  const navigate=useNavigate();
-  
   // Handle subject selection
   const handleClick = (subject) => {
     setSelectedSubject(subject.name);
     console.log("Selected Subject:", subject.name);
     props.onsubjectSelect(subject.name)
-    navigate(`/subject/${subject.name}`)
   };
 
 
