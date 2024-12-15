@@ -1,6 +1,6 @@
-# IP-Survivor's-Kit 230
+# IP-Survivor's-Kit 3.0
 
-**IP-Survivor's-Kit 230** is an online platform designed to help GGSIP University students access notes and lectures seamlessly. This project aims to foster collaboration and provide resources that make learning easier and more engaging.
+**IP-Survivor's-Kit 3.0** is an online platform designed to help GGSIP University students access notes and lectures seamlessly. This project aims to foster collaboration and provide resources that make learning easier and more engaging.
 
 ---
 
@@ -100,4 +100,4 @@ This project is currently under development. Stay tuned for updates as I bring t
 ---
 
 ### Author
-Designed and developed by [Your Name].
+Designed and developed by Aditya Rawat.
