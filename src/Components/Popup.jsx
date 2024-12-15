@@ -15,7 +15,7 @@ const Popup = ({ onClose }) => {
 
       {/* Popup Container */}
       <div
-        className={`relative w-full max-w-sm bg-yellow-200 h-full p-6 overflow-y-auto transform transition-transform duration-300 ease-in-out translate-x-0`}
+        className={`relative w-full max-w-sm bg-yellow-200 h-full p-6 overflow-y-auto scrollbar-thin scrollbar-thumb-zinc-900 scrollbar-track-transparent scrollbar-thumb-rounded-full transform transition-transform duration-300 ease-in-out translate-x-0`}
       >
         {/* Close Button */}
         <button
@@ -72,7 +72,7 @@ const Popup = ({ onClose }) => {
             </div>
           </form>
 
-          <button className=" py-3 w-full bg-green-700 text-white font-bold rounded-lg hover:bg-green-800 hover:scale-105 transition-all ">
+          <button className=" py-3 w-full bg-green-700 text-white font-bold rounded-lg hover:bg-green-800 hover:scale-105 transition-all " onClick={()=>{window.open('https://github.com/not-AdityaRawat/IP-Survivor-s-Kit-3.0','_blank')}}>
             Contribute To The Project <FaStar color="gold" className="inline-block"/>
           </button>
         </div>

@@ -1,58 +1,79 @@
-# IP Survivor's Kit
+# IP-Survivor's-Kit 230
 
-A brief description of your project goes here. For example:
+**IP-Survivor's-Kit 230** is an online platform designed to help GGSIP University students access notes and lectures seamlessly. This project aims to foster collaboration and provide resources that make learning easier and more engaging.
 
-> A dynamic web application built using React and Vite to streamline workflows, enhance user experience, and optimize performance.
-
-## Table of Contents
-
-- [Features](#features)
-- [Tech Stack](#tech-stack)
-- [Installation](#installation)
-- [Development Workflow](#development-workflow)
-- [Project Structure](#project-structure)
-- [License](#license)
+---
 
 ## Features
 
-- Fast and optimized build process using Vite
-- Modular and reusable components with React
-- State management with hooks and context
-- API integration with asynchronous data fetching
-- Fully responsive and mobile-friendly design
+1. 💡 **Notes Sharing**: 
+   - Passed-out students can upload and share their notes online.
+   - Contributors gain recognition for their efforts.
 
-## Tech Stack
+2. ⬆️ **Upvotes**:
+   - Individual users can upvote shared notes to highlight the most helpful ones.
 
-- **Frontend**: React, TailwindCSS (or any other CSS framework you use)
-- **Bundler**: Vite
-- **Language**: JavaScript (or TypeScript if applicable)
-- **Version Control**: Git
+3. 🌐 **Single-Page Application**:
+   - Built using the **MERN stack** (ReactJS, Redux, MongoDB, Node.js) for fast and dynamic performance.
+   - Developed using **Vite React** for better speed and simplicity in development.
 
-## Installation
+4. 🎥 **Online Lectures**:
+   - High-quality, syllabus-focused YouTube video lectures.
 
-1. Clone the repository:
+5. 📝 **Feedback & Open Contribution**:
+   - A system for users to provide feedback and contribute content to improve the platform.
+
+6. ✅ **To-do List**:
+   - Users can create personalized to-do lists based on their syllabus and datesheets.
+
+---
+
+## Technology Stack
+- **Frontend**: ReactJS, Redux, Vite React Bundler, TailwindCSS 
+- **Backend**: Node.js, Express.js, nodemailer, nodemon, jsonwebtokens, Google Cloud APIs
+- **Database**: MongoDB
+- **Hosting**: Vercel
+
+---
+
+## How to Contribute
+1. Fork the repository and clone it locally:
    ```bash
-   git clone https://github.com/yourusername/your-repo-name.git
-   cd your-repo-name
+   git clone https://github.com/not-AdityaRawat/IP-Survivor-s-Kit-3.0
    ```
 
-2. Install dependencies:
+2. Navigate to the project directory:
    ```bash
-   npm install
+   cd ip-survivors-kit
    ```
 
-3. Start the development server:
+3. Install dependencies:
    ```bash
-   npm run dev
+   npm install express react-router-dom react-icons/fi tailwindcss
    ```
 
-4. Open your browser and navigate to `http://localhost:5173` (default Vite dev server port).
+4. Create a new branch for your feature or fix:
+   ```bash
+   git checkout -b feature/your-feature-name
+   ```
 
-## Development Workflow
+5. Make your changes and commit them:
+   ```bash
+   git add .
+   git commit -m "Add your detailed commit message here"
+   ```
 
-- **Start Development**: Run `npm run dev` for a live development environment.
-- **Build for Production**: Use `npm run build` to create an optimized production build.
-- **Preview Build**: After building, run `npm run preview` to preview the production build locally.
+6. Push your branch to your forked repository:
+   ```bash
+   git push origin feature/your-feature-name
+   ```
+
+7. Open a pull request:
+   - Go to the original repository on GitHub.
+   - Click on **Pull Requests** and then **New Pull Request**.
+   - Select your branch and provide details about your changes.
+
+---
 
 ## Project Structure
 
@@ -64,7 +85,7 @@ project-root/
 ├── src/
 │   ├── components/ # Reusable components
 │   ├── pages/      # Page components
-│   ├── assets/     # Images, styles, etc.
+│   ├── icons/     # Images, styles, etc.
 │   ├── App.jsx     # Root component
 │   ├── main.jsx    # Vite entry point
 │   └── ...
@@ -73,16 +94,10 @@ project-root/
 └── README.md       # Project documentation
 ```
 
-## License
-
-This project is licensed under the [MIT License](LICENSE).
-
----
-
-### Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check the [issues page](https://github.com/yourusername/your-repo-name/issues) or submit a pull request.
+## Stay Tuned
+This project is currently under development. Stay tuned for updates as I bring this idea to life!
 
 ---
 
-**Made with ❤️ using React & Vite**
+### Author
+Designed and developed by [Your Name].

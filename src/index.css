@@ -8,6 +8,7 @@ body {
 }
 #root{
   background-color: #E1F396;
+  height: max-content;
 }
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
