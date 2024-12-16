@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import HamburgerPNG from "../icons/Hamburger Icon.png";
 import dropdownBlackPNG from "../icons/dropdownWHite.png";
 import { useNavigate} from "react-router-dom";
+import { IoBuildOutline } from "react-icons/io5";
 
 const Navbar = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -29,7 +30,7 @@ const Navbar = () => {
             alert("Under Construction 👷‍♂️");
           }}
         >
-          Workplace <span className="">&#x24D1;</span>{" "}
+          Workplace <span className="inline-block"><IoBuildOutline size={20}/></span>{" "}
         </button>
 
         <button
@@ -86,7 +87,7 @@ const Navbar = () => {
                 alert("Under Construction 👷‍♂️");
               }}
             >
-              WorkPlace <span className="">&#x24D1;</span>
+              WorkPlace <span className="inline-block"><IoBuildOutline size={20}/></span>
             </button>
             <button
               className="block w-full text-left px-4 py-2 hover:bg-gray-200"

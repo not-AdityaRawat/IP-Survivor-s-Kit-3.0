@@ -11,6 +11,7 @@ import SemBranch from './Pages/Sem&Branch.jsx';
 import Subjectspage from './Pages/Subjectspage.jsx';
 import Unitpage from './Pages/unitpage.jsx';
 import NotesnLectures from './Pages/NotesnLectures.jsx';
+import Error from './Components/Error.jsx';
 
 const router = createBrowserRouter([
   {
@@ -56,8 +57,13 @@ const router = createBrowserRouter([
       {
         path:"/Contribute",
         element:<Contribute/>
+      },
+      {
+        path:'*',
+        element:<Error/>
       }
     ]
+
   }
 ]);
 

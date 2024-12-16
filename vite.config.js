@@ -6,5 +6,11 @@ export default defineConfig({
   server: {
     host: true, // Enable access via your local IP
     port: 5173, // Optional: specify a port
+    proxy:{
+      '/contribute':{
+        target:'http://localhost:3000',
+        changeOrigin: true,
+      },
+    },
   },
 });
