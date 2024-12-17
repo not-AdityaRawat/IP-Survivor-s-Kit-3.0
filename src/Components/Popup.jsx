@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import UploadForm from "./UploadForm";
-import NotesForm from "./NotesForm";
+import Form from "./Form";
 import { FaStar } from "react-icons/fa6";
 const Popup = ({ onClose }) => {
   const [isUploaded, setIsUploaded] = useState(false);
@@ -27,12 +27,15 @@ const Popup = ({ onClose }) => {
 
         <div className="mt-8">
           {isUploaded ? (
-            <NotesForm />
+            <Form />
           ) : (
             <UploadForm onUploadSuccess={() => setIsUploaded(true)} />
           )}
+           
         </div>
 
+
+        {/* Youtube Playlist  */}
         <div className="mt-8">
           <h2 className="text-2xl font-bold mb-4 text-center">
             Share a Youtube Lecture Link
@@ -58,6 +61,8 @@ const Popup = ({ onClose }) => {
                   <option>Mathematics</option>
                   <option>Physics</option>
                 </select>
+
+                {/* User Selects the Units */}
                 <select className="w-1/2 p-3 border border-gray-400 rounded focus:outline-none focus:ring focus:ring-yellow-500">
                   <option>Select Unit</option>
                   <option>Unit-1</option>
@@ -72,6 +77,8 @@ const Popup = ({ onClose }) => {
             </div>
           </form>
 
+
+          {/* Github Repo & Contribution */}
           <button className=" py-3 w-full bg-green-700 text-white font-bold rounded-lg hover:bg-green-800 hover:scale-105 transition-all " onClick={()=>{window.open('https://github.com/not-AdityaRawat/IP-Survivor-s-Kit-3.0','_blank')}}>
             Contribute To The Project <FaStar color="gold" className="inline-block"/>
           </button>
